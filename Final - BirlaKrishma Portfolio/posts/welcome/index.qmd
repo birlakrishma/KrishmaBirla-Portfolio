@@ -1,0 +1,10 @@
+---
+title: "Welcome To My Blog"
+author: "Krishma Birla"
+date: "2023-11-30"
+categories: [Welcome]
+---
+
+Salutations folks! I encourage you to learn about my professional life and skills through my blog.
+
+![](thumbnail.jpg){width="333" height="375"}

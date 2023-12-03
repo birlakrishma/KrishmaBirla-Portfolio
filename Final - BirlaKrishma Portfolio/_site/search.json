@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Salutations folks! I encourage you to learn about my professional life and skills through my blog."
+  },
+  {
+    "objectID": "posts/Post Code/index.html",
+    "href": "posts/Post Code/index.html",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "Here is a breakdown of my code that displays linear regression based on my Week 5 lab work.\n\n\n'data.frame':   999 obs. of  12 variables:\n $ fage    : int  NA NA 19 21 NA NA 18 17 NA 20 ...\n $ mage    : int  13 14 15 15 15 15 15 15 16 16 ...\n $ mature  : chr  \"younger mom\" \"younger mom\" \"younger mom\" \"younger mom\" ...\n $ weeks   : int  39 42 37 41 39 38 37 35 38 37 ...\n $ premie  : chr  \"full term\" \"full term\" \"full term\" \"full term\" ...\n $ visits  : int  10 15 11 6 9 19 12 5 9 13 ...\n $ marital : chr  \"married\" \"married\" \"married\" \"married\" ...\n $ gained  : int  38 20 38 34 27 22 76 15 NA 52 ...\n $ weight  : num  7.63 7.88 6.63 8 6.38 5.38 8.44 4.69 8.81 6.94 ...\n $ gender  : chr  \"male\" \"male\" \"female\" \"male\" ...\n $ habit   : chr  \"nonsmoker\" \"nonsmoker\" \"nonsmoker\" \"nonsmoker\" ...\n $ whitemom: chr  \"not white\" \"not white\" \"white\" \"white\" ...\n\n\n\n\n\nPlease see the comments in the code to understand what each line accomplishes.\nOverview:\nThe code starts out by incorporating the packages for the code to run smoothly. I then used a code to read and recognize Data_RLab5 (1).cvs. I excluded lowbirthweight from the dataset.\nMoreover, I analyzed the data format in Data_RLab5 (1).cvs. I also checked the variables format. I then located and put in values that were absent (when it comes to variables that are numeric, the median was used. Additionally, the mode was used in term of variables of categories). Finally, using absolute value, my code finds the variable that is most highly correlated in terms of the target variable. My code then displays the linear regression (target variable vs the variable with the most correlation). From the linear regression model, there appears to be a positive correlation in terms of weeks and weight because as the pregnancy weeks progressed, so did the infant’s birth weight."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Krishma Birla",
+    "section": "",
+    "text": "My name is Krishma Birla. I graduated from the University of Texas at Arlington with a bachelor’s degree in finance. After that, I wanted to pursue a Master of Science in Advanced Data Analytics in the University of North Texas. I enjoy working with computers and different programs. I had interests in Linux and RStudio prior to the start of my degree, and I wanted to strengthen my skills in those subjects.\nI am currently an auditor in a small company. My daily tasks include processing invoices and checking warehouse receipts. My skills in RStudio, Linux, SAS, and Excel helps me in my job position, and it gives me an edge over my peers. I hope to hone my skills and one day become a data analyst in the next five years."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Krishma Birla",
+    "section": "",
+    "text": "Linear Regression\n\n\n\n\n\n\n\nAnalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2023\n\n\nKrishma Birla\n\n\n\n\n\n\n  \n\n\n\n\nResume\n\n\n\n\n\n\n\nResume\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2023\n\n\nKrishma Birla\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2023\n\n\nKrishma Birla\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Resume/Resume.html",
+    "href": "posts/Resume/Resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Resume - My Professional Work"
+  }
+]

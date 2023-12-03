@@ -1,0 +1,102 @@
+---
+title: "Linear Regression"
+author: "Krishma Birla"
+date: "2023-11-30"
+categories: [Analysis]
+image: "image.jpg"
+---
+
+Here is a breakdown of my code that displays linear regression based on my Week 5 lab work.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(rpart)
+library(rsample)
+library(caret)
+library(mgcv)
+
+knitr::opts_chunk$set(echo = TRUE)
+
+
+
+
+# Run this code chunk without altering it
+# clear the session
+rm(list=ls())
+
+# Data is stored in a csv file, the first row contains the variable names. 
+# we call our data mydata
+mydata<-read.csv ("Data_RLab5 (1).csv", header=TRUE)
+
+# remove lowbirthweight
+mydata<-mydata%>%
+  select(-lowbirthweight)
+
+
+
+# Task 1: Data Preparation
+
+# Task 1: Exploring Data
+
+# Review variable descriptions and dataset structure
+structure_summary <- str(mydata)
+
+# Identify factor/categorical variables
+factor_vars_info <- sapply(mydata, is.factor)
+
+# Check for missing values in the dataset
+missing_values_count <- colSums(is.na(mydata))
+
+# Address missing values for numeric variables
+numeric_columns <- names(mydata)[sapply(mydata, is.numeric)]
+for (column in numeric_columns) {
+  if (sum(is.na(mydata[[column]])) > 0) {
+    # Check for missing values in the column
+    mydata[[column]][is.na(mydata[[column]])] <- median(mydata[[column]], na.rm = TRUE)
+  }
+}
+
+# Address missing values for categorical variables
+factor_columns <- names(mydata)[sapply(mydata, is.factor)]
+for (column in factor_columns) {
+  if (sum(is.na(mydata[[column]])) > 0) {
+    # Check for missing values in the column
+    mode_value <- names(sort(table(mydata[[column]]), decreasing = TRUE))[1]
+    mydata[[column]][is.na(mydata[[column]])] <- mode_value
+  }
+}
+
+# Conduct correlation analysis for numeric variables
+numeric_data_matrix <- mydata[, sapply(mydata, is.numeric)]
+correlation_matrix <- cor(numeric_data_matrix)
+
+# Define the target variable
+chosen_target_variable <- "weight"
+
+# Identify the variable with the highest correlation (in absolute value) with the target variable
+correlation_with_target <- correlation_matrix[chosen_target_variable, ]
+correlation_with_target <- correlation_with_target[order(abs(correlation_with_target), decreasing = TRUE)]
+highest_correlation_variable <- names(correlation_with_target)[2]  # Variable with the highest correlation (excluding 'weight')
+
+
+# Generate a scatter plot with a line to visualize the relationship between the target variable and the highest correlated variable
+library(ggplot2)
+ggplot(mydata, aes_string(x = highest_correlation_variable, y = chosen_target_variable)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +  # Add a linear regression line
+  labs(x = highest_correlation_variable, y = chosen_target_variable, title = paste("Scatter Plot of", chosen_target_variable, "vs", highest_correlation_variable))
+
+
+
+```
+
+Please see the comments in the code to understand what each line accomplishes.
+
+Overview:
+
+The code starts out by incorporating the packages for the code to run smoothly. I then used a code to read and recognize Data_RLab5 (1).cvs. I excluded lowbirthweight from the dataset.
+
+Moreover, I analyzed the data format in Data_RLab5 (1).cvs. I also checked the variables format. I then located and put in values that were absent (when it comes to variables that are numeric, the median was used. Additionally, the mode was used in term of variables of categories). Finally, using absolute value, my code finds the variable that is most highly correlated in terms of the target variable. My code then displays the linear regression (target variable vs the variable with the most correlation). From the linear regression model, there appears to be a positive correlation in terms of weeks and weight because as the pregnancy weeks progressed, so did the infant's birth weight.

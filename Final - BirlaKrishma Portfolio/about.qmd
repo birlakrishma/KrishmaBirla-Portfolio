@@ -1,0 +1,20 @@
+---
+title: "Krishma Birla"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: outlook
+      text: Outlook
+      href: https://outlook.com/krishmabirla@my.unt.edu
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com/birlakrishma
+---
+
+My name is Krishma Birla. I graduated from the University of Texas at Arlington with a bachelor's degree in finance. After that, I wanted to pursue a Master of Science in Advanced Data Analytics in the University of North Texas. I enjoy working with computers and different programs. I had interests in Linux and RStudio prior to the start of my degree, and I wanted to strengthen my skills in those subjects.
+
+I am currently an auditor in a small company. My daily tasks include processing invoices and checking warehouse receipts. My skills in RStudio, Linux, SAS, and Excel helps me in my job position, and it gives me an edge over my peers. I hope to hone my skills and one day become a data analyst in the next five years.

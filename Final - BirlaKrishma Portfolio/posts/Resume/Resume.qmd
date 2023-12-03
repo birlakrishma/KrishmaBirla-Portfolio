@@ -1,0 +1,10 @@
+---
+title: "Resume"
+author: "Krishma Birla"
+date: "2023-11-30"
+categories: [Resume]
+---
+
+Resume - My Professional Work
+
+![](thumbnail.jpg){width="333" height="375"}
